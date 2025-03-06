@@ -1,0 +1,34 @@
+#dictionary with list values
+dict_with_lists = {'Boys': ['James', 'Daniel'], 'girls': ['magdalin', 'mary']}
+for key, values in dict_with_lists.items():
+    print(key)
+    for value in values:
+        print(f"  {value}")
+        
+# updating  value by adding by 10      
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for key in my_dict:
+    my_dict[key] += 10
+print(my_dict)
+
+#odd and even
+my_dict = {'a': 1, 'b': 2, 'c': 3}
+for key, value in my_dict.items():
+    if value % 2 == 0:
+        print(f"Even: {key} -> {value}")
+    else:
+         print(f"odd: {key} -> {value}")
+#iterate over a nested dictionary
+nested_dict = {
+    'person1': {'name': 'magdalin', 'cls': 9},
+    'person2': {'name': 'felicita', 'cls': 10}
+}
+for person, details in nested_dict.items():
+    print(person)
+    for key, value in details.items():
+        print(f"  {key}: {value}")
+#merging two dictionary
+dict1 = {'a': 1, 'b': 2}
+dict2 = {'c': 3, 'd': 4}
+merged_dict = {**dict1, **dict2}
+print(merged_dict)
